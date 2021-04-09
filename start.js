@@ -19,12 +19,12 @@ templateEngine.configure('views', {
 
 // Première méthode, utilisation directe
 app.get('/', function (req, res) { res.render('start.html'); });
-app.get('/horaireetemplacement.html', function (req, res) { res.render('horaireetemplacement.html'); });
+app.get('/apropos.html', function (req, res) { res.render('apropos.html'); });
 app.get('/contact.html', function (req, res) { res.render('contact.html'); });
 
 // Seconde méthode, utilisation d'une méthode JavaScript
-var news = require('./controllers/news');
-app.get('/news', news.start);
+var dest = require('./controllers/destination');
+app.get('/destination.html', dest.start);
 
 // Routes statiques
 app.use('/css/bootstrap.min.css', express.static('node_modules/bootstrap/dist/css/bootstrap.min.css'));

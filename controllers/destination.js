@@ -3,7 +3,7 @@ exports.start = function (req, res) {
 
     var now = new Date(Date.now());
 
-    res.render('news.html', { title: 'News du ' + now.getDate() + "/" + now.getMonth() + "/" + now.getFullYear() + " " + now.getHours() + ":" + now.getMinutes() });
+    res.render('destination.html', { title: 'Destinations disponible au ' + now.getDate() + "/" + now.getMonth() + "/" + now.getFullYear() + " " + now.getHours() + ":" + now.getMinutes() });
     
     console.log('HTTP Referer : ' + req.headers.referer  + " ; Path : " + req.url)
 }
