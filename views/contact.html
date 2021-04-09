@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+
+{% block title %}SWME - contact{% endblock %}
+{% block breadcrumb %}Site Web d'un magasin à emporter - contact{% endblock %}
+{% block styles %}
+<link rel="stylesheet" href="css/bootstrap-themes/cable/index.min.css">
+{% endblock %}
+
+
+{% block content %}
+<div align="center">
+    <p>Contactez nous : </p>
+    <form action="/formulaire-de-contact" method="post">
+     <ul>
+      <li>
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom">
+      </li>
+      <li>
+        <label for="mail">Adresse mail :</label>
+        <input type="mail" id="mail" name="email">
+      </li>
+      <li>
+        <label for="msg">Message :</label>
+        <textarea id="msg" name="message"></textarea>
+      </li>
+      <li class="button">
+          <button type="submit">Envoyer</button>
+      </li>
+     </ul>
+    </form>
+
+</div>
+{% endblock %}

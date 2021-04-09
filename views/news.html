@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block title %}Actualités{% endblock %}
+{% block breadcrumb %}{{ title }}{% endblock %}
+{% block styles %}
+<link rel="stylesheet" href="css/bootstrap-themes/ectype/index.min.css">
+{% endblock %}
+
+{% block content %}
+<h1>Des news</h1>
+<br />
+<div class="alert alert-primary" role="alert">
+    Sample news !
+</div>
+  <div class="alert alert-success" role="alert">
+    Good news !
+  </div>
+  <div class="alert alert-danger" role="alert">
+    Breaking news !
+  </div>
+{% endblock %}
