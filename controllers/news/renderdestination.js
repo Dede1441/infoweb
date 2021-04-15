@@ -1,5 +1,5 @@
 
-const News = require('../../model/news')
+const News = require('../../model/destination')
 
 exports.render = async function (req, res) {
   const defaultComponent = new News(req, res)
@@ -8,5 +8,5 @@ exports.render = async function (req, res) {
 
   const newsList = defaultComponent.getNews()
 
-  res.render('news.html', { voyagesItem: newsList })
+  res.render('destinations.html', { voyagesItem: newsList })
 }
