@@ -17,7 +17,7 @@
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Université Savoie-Mont-Blanc</a>
+    <a class="navbar-brand" href="#">Site de voyage</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -31,7 +31,7 @@
       </ul>
       <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Recherche</button>
       </form>
     </div>
   </nav>
@@ -40,14 +40,29 @@
 
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item" id="common-breadcrumb"><a href="#">Université Savoie-Mont-Blanc</a></li>
+        <li class="breadcrumb-item" id="common-breadcrumb"><a href="#">Un Site de destination</a></li>
         <li class="breadcrumb-item active" aria-current="page">{% block breadcrumb %}{% endblock %}</li>
       </ol>
     </nav>
+    <nav>
+      <ol>
+      <li><a href="/">Accueil</a></li>
+      <li><a href="apropos">A propos</a></li>
+      <li><a href="contact">Contact</a></li>
+  </ol>
+  </nav>
     <div class="container">
       {% block content %}{% endblock %}
     </div>
 
 </body>
+<footer class="text-center text-white fixed-bottom" style="background-color: #000000;">
+
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2024 Copyright:
+    <p class="text-white">Auteur : Léo Paturaud, Kassim Jondeau, Romain Guernier. Publié le 15 avril 2021</p>
+  </div>
+
+</footer>
 
 </html>

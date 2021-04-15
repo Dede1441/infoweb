@@ -17,6 +17,9 @@ templateEngine.configure('views', {
 
 const destination = require('./controllers/news/renderdestination')
 app.get('/', destination.render)
+app.get('/apropos', function (req, res) { res.render('apropos.html'); });
+app.get('/contact', function (req, res) { res.render('contact.html'); });
+
 // Routes statiques
 app.use('/css/bootstrap.min.css', express.static('node_modules/bootstrap/dist/css/bootstrap.min.css'))
 app.use('/css/bootstrap.min.css.map', express.static('node_modules/bootstrap/dist/css/bootstrap.min.css.map'))
