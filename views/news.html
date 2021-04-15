@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block title %}News{% endblock %}
+{% block styles %}
+<link rel="stylesheet" href="css/default.css">
+{% endblock %}
+{% block scripts %}
+{% endblock %}
+
+{% block content %}
+<h2>Liste des news</h2>
+{% for row in newsItem %}
+
+<div class="alert alert-primary" role="alert">
+    <strong>Par {{ row.author }} le {{ row.date }}</strong>
+    <br /><i>{{ row.summary }}</i>
+    <br />{{ row.content }}
+</div>
+
+{% endfor %}
+{% endblock %}
