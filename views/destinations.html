@@ -15,7 +15,33 @@
     <strong><a href>{{ row.country }}, {{ row.destination }}</a></strong>
     <br /><img src={{ row.photo }} width="20%"> 
     <br />{{ row.description }}
-</div>
+
+                <h2>Laissez un commentaire</h2>
+
+                <form>
+                    <!-- <textarea placeholder='Mettez votre commentaire ici...'></textarea>
+                    <div class="btn">
+                        <input type="submit" value='Commenter'>
+                        <button id='clear'>Cancel</button> -->
+
+                    <!--<textarea placeholder='Entrez votre commentaire ici...'></textarea> -->
+                        <input type="text" placeholder="Entrez votre commentaire" id="in">
+                        <button type="button" onclick="getValue();">Enovyer votre commentaire</button>
+                        <button id='clear'>Vider</button>
+                    </div>
+                </form>
+
+                <script>
+                function getValue() {
+                    // Sélectionner l'élément input et récupérer sa valeur
+                    var input = document.getElementById("in").value;
+                    // Afficher la valeur
+                    alert(input);
+                }
+                </script>
+</div>      
+            <script src='plugin.js'></script>   
+
 
 {% endfor %}
 {% endblock %}
