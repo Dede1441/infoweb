@@ -16,8 +16,8 @@ templateEngine.configure('views', {
 })
 
 const news = require('./controllers/news/rendernews')
+const destination = require('./controllers/news/renderdestination')
 app.get('/', news.render)
-
 // Routes statiques
 app.use('/css/bootstrap.min.css', express.static('node_modules/bootstrap/dist/css/bootstrap.min.css'))
 app.use('/css/bootstrap.min.css.map', express.static('node_modules/bootstrap/dist/css/bootstrap.min.css.map'))

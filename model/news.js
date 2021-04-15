@@ -18,7 +18,7 @@ class News {
 
   async getNewsList () {
     try {
-      this.news = await connexion.query('SELECT author, date, summary, content FROM news ORDER BY date')
+      this.news = await connexion.query('SELECT country, destination, photo, description FROM voyages ORDER BY country')
     } catch (anError) {
       console.log('Error to get news !')
 
