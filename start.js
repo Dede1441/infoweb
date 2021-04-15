@@ -29,6 +29,7 @@ app.use('/js/bootstrap.min.js', express.static('node_modules/bootstrap/dist/js/b
 app.use('/js/bootstrap.min.js.map', express.static('node_modules/bootstrap/dist/js/bootstrap.min.js.map'))
 app.use('/js/jquery.slim.js', express.static('node_modules/jquery/dist/jquery.slim.js'))
 app.use('/js/popper.min.js', express.static('node_modules/popper.js/dist/popper.min.js'))
+app.use('/js/plugin.js', express.static('node_modules/jquery/dist/plugin.js'))
 
 // Démarrage du serveur
 app.listen(N_PORT)
