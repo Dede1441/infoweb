@@ -5,31 +5,31 @@
 <link rel="stylesheet" href="css/default.css">
 {% endblock %}
 {% block scripts %}
+<script>
+     
+    function getValue() {
+        var input = document.getElementById("in").value;
+    }
+    </script>
 {% endblock %}
 
 {% block content %}
 <h2>Liste des destination</h2>
 {% for row in voyagesItem %}
+{% set prixreduit = row.reduction * row.prix %}
 
 <div class="alert alert-primary" role="alert">
-    <strong><a href>{{ row.country }}, {{ row.destination }}, {{ row.prix }}</a></strong>
+    <strong><a href>{{ row.country }}, {{ row.destination }}, {{ row.prix }} €</a></strong>
     <br /><img src={{ row.photo }} width="20%"> 
     <br />{{ row.description }}  {{ row.trajet }}
-    <br /> <p>Prix réduit : {{ prixreduit }}</p>
+    <br /> <p>Prix réduit : {{ prixreduit }} €</p>
 
                 <h2>Laissez un commentaire</h2>
 
                 <form>
                         <input type="text" placeholder="Entrez votre commentaire" id="in">
                         <button type="button" onclick="getValue();">Envoyer votre commentaire</button>
-                </form>
-
-                <script>
-                var prixreduit = row.reduction * row.prix 
-                function getValue() {
-                    var input = document.getElementById("in").value;
-                }
-                </script>
+                </form>        
 </div> 
 {% endfor %}
 {% endblock %}
